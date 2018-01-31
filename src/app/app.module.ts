@@ -3,16 +3,21 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
+import { TodosComponent } from './todos/todos.component';
+import { TodosDropdownService } from './todos-dropdown.service';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TodosComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [TodosDropdownService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
